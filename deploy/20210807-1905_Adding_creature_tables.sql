@@ -12,14 +12,14 @@ CREATE TABLE creatures.monsters (
     id SERIAL PRIMARY KEY,
     user_id INTEGER NOT NULL,
     rarity INTEGER NOT NULL,
-    level VARCHAR(64) NOT NULL,
+    level INTEGER NOT NULL,
     exp INTEGER,
     powerup INTEGER,
     boost INTEGER,
     powerup_boost INTEGER,
     total_boost INTEGER,
-    gas INTEGER,
-    rewards INTEGER,
+    gas NUMERIC(4, 4),
+    rewards NUMERIC(5, 2),
     wins INTEGER,
     losses INTEGER
 );
