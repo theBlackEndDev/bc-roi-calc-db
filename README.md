@@ -16,6 +16,5 @@ This will pull down the latest Sqitch image in docker and immediately run the sq
 
 If you want to check postgres, you can log in directly using psql.
 
-`psql -h localhost -U yoc_sqitch -d yoc_database_dev`
+`psql -h localhost -U username -d database`
 
-Use the password 12341234
