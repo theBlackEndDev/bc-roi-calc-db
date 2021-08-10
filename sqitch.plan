@@ -1,6 +1,5 @@
 %syntax-version=1.0.0
 %project=bc-roi-calc-db
 
-20210807-1900_Adding_schemas 2021-08-07T22:54:36Z Hus,,, <hus@hus-ThinkPad-P53> # initial add of schemas
 20210807-1905_Adding_creature_tables 2021-08-07T22:56:49Z Hus,,, <hus@hus-ThinkPad-P53> # Adding initial creature tables
 20210807-1910_Adding_monsters+powerups 2021-08-07T23:11:46Z Hus,,, <hus@hus-ThinkPad-P53> # Adding monsters and powerups
