@@ -41,10 +41,10 @@ CREATE TABLE public._monsters__rarity (
 );
 
 ALTER TABLE public._monsters__rarity ADD CONSTRAINT fk_monster_id__id
-    FOREIGN KEY(monster_id) REFERENCES creatures.monsters(id) ON UPDATE CASCADE;
+    FOREIGN KEY(monster_id) REFERENCES public.monsters(id) ON UPDATE CASCADE;
 
 ALTER TABLE public._monsters__rarity ADD CONSTRAINT fk_rarity_id__id
-    FOREIGN KEY(rarity_id) REFERENCES creatures.rarity(id) ON UPDATE CASCADE;
+    FOREIGN KEY(rarity_id) REFERENCES public.rarity(id) ON UPDATE CASCADE;
 
 CREATE TABLE public.powerups (
     id            SERIAL PRIMARY KEY,
