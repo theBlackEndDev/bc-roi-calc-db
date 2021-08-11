@@ -45,4 +45,11 @@ VALUES('mythic', 'https://i.ibb.co/s1NL6gn/mythic-powerup.png', 15);
 INSERT INTO public.powerups(name, image_link, boost)
 VALUES('godlike', 'https://i.ibb.co/NSQQ9rm/godlike-powerup.png', 20);
 
+INSERT INTO users(username, password)
+VALUES('testaccount', 'password1234');
+
+INSERT INTO monsters(user_id, rarity, level, exp, powerup, boost,
+                     powerup_boost, total_boost, gas, rewards, wins, losses)
+VALUES(1, 1, 5, 62, 0, 1, 0, 1, null, null, null, null);
+
 COMMIT;
