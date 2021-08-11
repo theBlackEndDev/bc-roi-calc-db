@@ -45,11 +45,17 @@ VALUES('mythic', 'https://i.ibb.co/s1NL6gn/mythic-powerup.png', 15);
 INSERT INTO public.powerups(name, image_link, boost)
 VALUES('godlike', 'https://i.ibb.co/NSQQ9rm/godlike-powerup.png', 20);
 
-INSERT INTO users(username, password)
+INSERT INTO public.users(username, password)
 VALUES('testaccount', 'password1234');
 
-INSERT INTO monsters(user_id, rarity, level, exp, powerup, boost,
-                     powerup_boost, total_boost, gas, rewards, wins, losses)
-VALUES(1, 1, 5, 62, 0, 1, 0, 1, null, null, null, null);
+INSERT INTO public.monsters (id, user_id, rarity, level, exp, powerup, boost, powerup_boost, total_boost, gas, rewards,
+                             wins, losses)
+VALUES (DEFAULT, 1, 1, 5, 56, null, 1, 1, 1, null, null, null, null);
+
+INSERT INTO public._monsters__rarity (id, monster_id, rarity_id)
+VALUES (DEFAULT, 1, 1);
+
+INSERT INTO public._monsters__powerups (id, monster_id, powerup_id)
+VALUES (DEFAULT, 1, 1);
 
 COMMIT;
