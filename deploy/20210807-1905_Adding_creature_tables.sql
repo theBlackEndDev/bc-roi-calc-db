@@ -2,14 +2,22 @@
 
 BEGIN;
 
+CREATE SEQUENCE users_id_seq;
+
+CREATE SEQUENCE monsters_id_seq;
+
+CREATE SEQUENCE _monsters__powerups_id_seq;
+
+CREATE SEQUENCE _monsters__rarity_id_seq;
+
 CREATE TABLE public.users (
-    id SERIAL PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY DEFAULT nextval('users_id_seq'),
     username VARCHAR(32) NOT NULL UNIQUE,
     password VARCHAR(64) NOT NULL
 );
 
 CREATE TABLE public.monsters (
-    id SERIAL PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY DEFAULT nextval('monsters_id_seq'),
     user_id INTEGER NOT NULL,
     rarity INTEGER NOT NULL,
     level INTEGER NOT NULL,
@@ -35,7 +43,7 @@ CREATE TABLE public.rarity (
 );
 
 CREATE TABLE public._monsters__rarity (
-    id SERIAL PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY DEFAULT nextval('_monsters__rarity_id_seq'),
     monster_id INTEGER NOT NULL,
     rarity_id INTEGER NOT NULL
 );
@@ -54,7 +62,7 @@ CREATE TABLE public.powerups (
 );
 
 CREATE TABLE public._monsters__powerups (
-    id SERIAL PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY DEFAULT nextval('_monsters__powerups_id_seq'),
     monster_id INTEGER NOT NULL,
     powerup_id INTEGER NOT NULL
 );
